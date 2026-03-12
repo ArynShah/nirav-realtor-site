@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirav Shah | Realtor</title>
+    <title>Realtor Nirav Shah</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="glass-nav">
         <div class="logo" id="nav-logo">Realtor Nirav Shah</div>
-        <a href="#contact" class="btn-glass-small">Contact</a>
+        
+        <div class="hamburger" id="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+            <li><a href="index.html#contact" class="btn-glass-small">Contact</a></li>
+        </ul>
     </nav>
 
     <header class="hero">
@@ -19,13 +31,13 @@
             <div class="bio">
                 <h1 id="hero-name">Loading...</h1>
                 <p id="hero-tagline">Loading...</p>
-                <a href="#listings" class="btn-solid">View Properties</a>
+                <a href="listings.html" class="btn-solid">View All Properties</a>
             </div>
         </div>
     </header>
 
     <section id="listings" class="section">
-        <h2 class="section-title">Exclusive Listings</h2>
+        <h2 class="section-title">Featured Listings</h2>
         <div id="listings-container" class="carousel">
             </div>
     </section>
@@ -47,24 +59,11 @@
         </div>
     </section>
 
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 Realtor Nirav Shah. All rights reserved.</p>
+    </footer>
+
     <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
-
-<nav class="glass-nav">
-        <div class="logo" id="nav-logo">Realtor Nirav Shah</div>
-        
-        <div class="hamburger" id="hamburger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="listings.html">Listings</a></li>
-            <li><a href="index.html#resources">Resources</a></li>
-            <li><a href="index.html#contact" class="btn-glass-small">Contact</a></li>
-        </ul>
-    </nav>

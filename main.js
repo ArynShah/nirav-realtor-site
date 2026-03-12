@@ -1,19 +1,14 @@
 // main.js
-const hamburger = document.getElementById('hamburger-menu');
-const navLinks = document.getElementById('nav-links');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        
-        //Animate hamburger into an 'X'
-        hamburger.classList.toggle('toggle');
-    });
+// This file handles dynamic content rendering for the homepage and property details page
+const heroName = document.getElementById('hero-name');
+if (heroName) {
+    heroName.innerText = siteData.realtor.name;
 }
 
-
-document.getElementById('hero-name').innerText = siteData.realtor.name;
-document.getElementById('hero-tagline').innerText = siteData.realtor.tagline;
+const heroTagline = document.getElementById('hero-tagline');
+if (heroTagline) {
+    heroTagline.innerText = siteData.realtor.tagline;
+}
 
 const portraitImg = document.getElementById('hero-portrait');
 if (portraitImg) {
@@ -22,11 +17,10 @@ if (portraitImg) {
         console.error("Failed to load portrait image at:", siteData.realtor.portrait);
     };
 }
-
 //Render the Listings Section
 const listingsContainer = document.getElementById('listings-container');
 if (listingsContainer && siteData.listings) {
-    listingsContainer.innerHTML = ''; // Clear out the loading state
+    listingsContainer.innerHTML = '';
 
     siteData.listings.forEach(property => {
         const card = document.createElement('div');
