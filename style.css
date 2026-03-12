@@ -6,7 +6,7 @@
     --accent: #2563eb;
 }
 
-body {
+html, body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
     background: var(--bg-gradient);
@@ -224,9 +224,20 @@ body {
     display: flex;
     align-items: center;
 }
-/* Make the hamburger icon white */
+/* Base Hamburger Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .hamburger .bar {
+    width: 25px;
+    height: 3px;
     background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 /* Make the Contact button pop against the dark blue */
@@ -251,16 +262,16 @@ body {
     }
 
     .nav-links {
-        position: fixed; /* Fixed is better than absolute here */
-        top: 65px; /* Height of the mobile nav bar */
-        right: -100%; /* Hidden off-screen by default */
+        position: fixed;
+        top: 65px;
+        right: -100%;
         flex-direction: column;
-        background: rgba(30, 58, 138, 0.98); /* Deep blue background */
+        background: rgba(30, 58, 138, 0.98);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         width: 250px;
-        height: calc(100vh - 65px); /* Full height minus top bar */
-        padding-top: 3rem; /* Space at the top of the menu */
+        height: calc(100vh - 65px);
+        padding-top: 3rem;
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0,0,0,0.3);

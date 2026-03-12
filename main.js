@@ -1,5 +1,16 @@
 // main.js
 // This file handles dynamic content rendering for the homepage and property details page
+
+// Mobile Hamburger Menu Logic
+const hamburger = document.getElementById('hamburger-menu');
+const navLinks = document.getElementById('nav-links');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
+
 const heroName = document.getElementById('hero-name');
 if (heroName) {
     heroName.innerText = siteData.realtor.name;
