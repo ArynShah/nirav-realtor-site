@@ -12,17 +12,22 @@ body {
     background: var(--bg-gradient);
     color: var(--text-main);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Glass Utilities */
 .glass-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* This perfectly aligns the Contact button */
+    align-items: center; 
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(30, 58, 138, 0.9);
+    
     
     /* New Deep Blue Glass Look */
     background: rgba(30, 58, 138, 0.9); 
@@ -246,22 +251,28 @@ body {
     }
 
     .nav-links {
-        position: absolute;
-        top: 70px;
+        position: fixed; /* Fixed is better than absolute here */
+        top: 65px; /* Height of the mobile nav bar */
         right: -100%; /* Hidden off-screen by default */
         flex-direction: column;
-        background: var(--glass-bg);
+        background: rgba(30, 58, 138, 0.98); /* Deep blue background */
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         width: 250px;
-        height: 100vh;
-        padding-top: 2rem;
-        border-left: 1px solid var(--glass-border);
+        height: calc(100vh - 65px); /* Full height minus top bar */
+        padding-top: 3rem; /* Space at the top of the menu */
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
         transition: right 0.3s ease;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
     }
 
     .nav-links.active {
-        right: 0; /* Slides in when active */
+        right: 0; /* Slides in when hamburger is clicked */
+    }
+
+    .nav-links li {
+        width: 100%;
+        justify-content: center; /* Centers the links in the mobile menu */
+        margin-bottom: 1.5rem; /* Adds breathing room between links */
     }
 }
