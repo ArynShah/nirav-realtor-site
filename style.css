@@ -287,3 +287,101 @@ html, body {
         margin-bottom: 1.5rem; /* Adds breathing room between links */
     }
 }
+
+
+/* --- ICONS & HIGHLIGHTS ON CARDS --- */
+.icon-specs {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.icon-specs i {
+    color: var(--accent);
+}
+
+.highlights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.highlights-list li {
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.highlights-list i {
+    color: var(--accent);
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+/* --- FIX: PREVENT UNWANTED BLUE HIGHLIGHTS --- */
+a {
+    text-decoration: none;
+}
+
+/* Force Nav links to stay off-white even after clicking */
+.nav-links a:link, .nav-links a:visited {
+    color: rgba(255, 255, 255, 0.8); 
+}
+
+.nav-links a:hover, .nav-links a:active {
+    color: white;
+}
+
+/* Buttons stay correct colors */
+.btn-glass:visited { color: var(--text-main); }
+.btn-solid:visited { color: white; }
+
+
+/* --- HERO CONTACT INFO STYLES --- */
+.hero-contact-info {
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.hero-contact-info p {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Spaces the icon from the text */
+}
+
+.hero-contact-info a {
+    color: var(--text-main);
+    transition: color 0.2s ease;
+}
+
+.hero-contact-info a:hover {
+    color: var(--accent);
+}
+
+.hero-contact-info i {
+    color: var(--accent);
+    width: 20px; /* Keeps icons perfectly aligned */
+}
+
+.hero-socials {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.hero-socials a {
+    color: var(--accent);
+    margin-right: 1rem;
+}
+
+.hero-socials a:hover {
+    color: var(--text-main);
+}

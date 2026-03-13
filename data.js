@@ -1,7 +1,12 @@
 const siteData = {
     realtor: {
         name: "Nirav Shah",
-        phone: "+1 (647) 854-7700",
+        phone: "(647) 854-7700",
+        fax: "(416) 747-9777",
+        email: "realtorniravshah@yahoo.com",
+        officeAddress: "470 Chrysler Dr #20, Brampton, ON L6S 0C1",
+        facebook: "https://facebook.com/yourprofile", 
+        instagram: "https://www.instagram.com/realtor.niravshah/",
         portrait: "assets/nirav-portrait.jpeg",
         tagline: "Elevating your real estate experience."
     },
@@ -10,7 +15,13 @@ const siteData = {
             id: "prop-001",
             address: "123 Glassy Way, Cambridge",
             price: "$850,000",
-            specs: "3 Bed • 2 Bath",
+            beds: 3,
+            baths: 2,
+            sqft: 2100,
+            highlights: [
+                "Open-concept chef's kitchen",
+                "Spacious backyard for entertaining"
+            ],
             image: "assets/house1/01.jpg",
             description: "A stunning modern home featuring open-concept living, a newly renovated kitchen, and a spacious backyard perfect for entertaining.",
             gallery: ["assets/house1/01.jpg", "assets/house1/02.jpg", "assets/house1/03.jpg", "assets/house1/04.jpg"] 
@@ -19,27 +30,32 @@ const siteData = {
             id: "prop-002",
             address: "123 Frosty Way, Cambridge",
             price: "$850,000",
-            specs: "3 Bed • 2 Bath",
+            beds: 3,
+            baths: 2,
+            sqft: 1850,
+            highlights: [
+                "Newly finished basement",
+                "Quiet, family-friendly neighborhood"
+            ],
             image: "assets/house1.jpg",
             description: "A stunning modern home featuring open-concept living, a newly renovated kitchen, and a spacious backyard perfect for entertaining.",
             gallery: ["assets/house1-2.jpg", "assets/house1-3.jpg"]
         }
     ],
-    
     resources: [
         {
             title: "First-Time Buyer Guide",
             type: "Guide",
             description: "Everything you need to know about your first home purchase.",
-            link: "assets/guides/buyer-guide.pdf", // Path to your PDF
-            thumbnail: "assets/guides/thumb-guide.jpg"
+            link: "assets/guides/buyer-guide.pdf", 
+            thumbnail: "assets/house1/01.jpg" // Added a thumbnail image for the card view
         },
         {
             title: "Latest Market Trends",
             type: "Reel",
             description: "A quick look at the Cambridge housing market this month.",
-            link: "https://instagram.com/your-reel-link", // Link to your Reel
-            thumbnail: "assets/reels/thumb-reel.jpg"
+            link: "https://instagram.com/your-reel-link", 
+            thumbnail: "assets/house1/02.jpg" // Added a thumbnail image for the card view
         }
     ]
 };

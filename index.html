@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realtor Nirav Shah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,13 +25,25 @@
             <li><a href="index.html#contact" class="btn-glass-small">Contact</a></li>
         </ul>
     </nav>
-
-    <header class="hero">
+   <header class="hero">
         <div class="glass-panel about-panel">
             <img src="" alt="Nirav Shah" id="hero-portrait" class="portrait">
             <div class="bio">
                 <h1 id="hero-name">Loading...</h1>
                 <p id="hero-tagline">Loading...</p>
+                
+                <div class="hero-contact-info">
+                    <p><i class="fa-solid fa-phone"></i> <a href="#" id="hero-phone">Loading...</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="#" id="hero-email">Loading...</a></p>
+                    <p><i class="fa-solid fa-fax"></i> <span id="hero-fax">Loading...</span></p>
+                    <p><i class="fa-solid fa-location-dot"></i> <span id="hero-address">Loading...</span></p>
+                    
+                    <div class="hero-socials">
+                        <a href="#" id="hero-fb" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" id="hero-ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
                 <a href="listings.html" class="btn-solid">View All Properties</a>
             </div>
         </div>
@@ -53,8 +66,9 @@
         <p style="text-align: center; margin-bottom: 2rem;">My schedule fills up quickly, but I always make time for new clients. Select a time below!</p>
         
         <div class="calendar-container">
-            <div class="calendly-mock" style="background: rgba(255,255,255,0.4); height: 400px; border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--accent);">
-                <p style="color: var(--accent); font-weight: bold;">[ Calendly Embed Widget Goes Here ]</p>
+<div class="calendly-inline-widget" data-url="https://calendly.com/shahniravs11/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
             </div>
         </div>
     </section>
