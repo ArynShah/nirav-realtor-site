@@ -9,47 +9,38 @@
 </head>
 <body>
 
-    <nav class="glass-nav">
-        <div class="logo" id="nav-logo">Realtor Nirav Shah</div>
-        
-        <div class="hamburger" id="hamburger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
+    <nav class="main-nav">
+        <div class="logo" id="nav-logo">Nirav Shah</div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="listings.html">Listings</a></li>
             <li><a href="index.html#resources">Resources</a></li>
-            <li><a href="index.html#contact" class="btn-glass-small">Contact</a></li>
+            <li><a href="index.html#contact" class="btn-solid">Contact</a></li>
         </ul>
     </nav>
+    
    <header class="hero">
-        <div class="glass-panel about-panel">
+        <div class="about-panel">
             <img src="" alt="Nirav Shah" id="hero-portrait" class="portrait">
             <div class="bio">
                 <h1 id="hero-name">Loading...</h1>
-                <p id="hero-tagline">Loading...</p>
+                <p id="hero-tagline" style="font-size: 1.2rem; margin-bottom: 1.5rem;">Loading...</p>
                 
                 <div class="hero-contact-info">
                     <p><i class="fa-solid fa-phone"></i> <a href="#" id="hero-phone">Loading...</a></p>
                     <p><i class="fa-solid fa-envelope"></i> <a href="#" id="hero-email">Loading...</a></p>
                     <p><i class="fa-solid fa-fax"></i> <span id="hero-fax">Loading...</span></p>
                     <p><i class="fa-solid fa-location-dot"></i> <span id="hero-address">Loading...</span></p>
-                    
-                    <div class="hero-socials">
-                        <a href="#" id="hero-fb" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" id="hero-ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
                 </div>
 
-                <a href="listings.html" class="btn-solid">View All Properties</a>
+                <div style="margin-top: 2rem;">
+                    <a href="listings.html" class="btn-solid">View Properties</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="listings" class="section">
+    <section id="listings" class="section bg-light-section">
         <h2 class="section-title">Featured Listings</h2>
         <div id="listings-container" class="carousel">
             </div>
@@ -61,19 +52,19 @@
             </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section bg-light-section">
         <h2 class="section-title">Let's Connect</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">My schedule fills up quickly, but I always make time for new clients. Select a time below!</p>
+        <p style="text-align: center; margin-bottom: 2rem; max-width: 600px; margin-inline: auto;">My schedule fills up quickly, but I always make time for new clients. Select a time below to get started.</p>
         
         <div class="calendar-container">
-<div class="calendly-inline-widget" data-url="https://calendly.com/shahniravs11/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/shahniravs11/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=dcd4c9&text_color=614e43&primary_color=af895c" style="min-width:320px;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-            </div>
+<!-- Calendly inline widget end -->
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+    <footer>
         <p>&copy; 2026 Realtor Nirav Shah. All rights reserved.</p>
     </footer>
 
