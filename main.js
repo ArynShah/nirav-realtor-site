@@ -17,6 +17,17 @@ if (heroFax) heroFax.innerText = siteData.realtor.fax;
 const heroAddress = document.getElementById('hero-address');
 if (heroAddress) heroAddress.innerText = siteData.realtor.officeAddress;
 
+// 2. Populate Social Links
+const heroFb = document.getElementById('hero-fb');
+if (heroFb && siteData.realtor.facebook) {
+    heroFb.href = siteData.realtor.facebook;
+}
+
+const heroIg = document.getElementById('hero-ig');
+if (heroIg && siteData.realtor.instagram) {
+    heroIg.href = siteData.realtor.instagram;
+}
+
 // 3. Populate Realtor Hero Info
 const heroName = document.getElementById('hero-name');
 if (heroName) heroName.innerText = siteData.realtor.name;
@@ -30,14 +41,32 @@ if (portraitImg) {
     portraitImg.onerror = () => console.error("Failed to load portrait.");
 }
 
-// 4. Render the Listings Section
+// 4. Mobile Hamburger Menu Auto-Close Logic
+const hamburger = document.getElementById('hamburger-menu');
+const navLinks = document.getElementById('nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Automatically close the menu when a link is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
+// 5. Render the Listings Section
 const listingsContainer = document.getElementById('listings-container');
 if (listingsContainer && siteData.listings) {
     listingsContainer.innerHTML = '';
 
     siteData.listings.forEach(property => {
         const card = document.createElement('div');
-        card.className = 'property-card'; // Updated class
+        card.className = 'property-card';
 
         card.innerHTML = `
             <div class="card-img" style="background-image: url('${property.image}');"></div>
@@ -58,14 +87,14 @@ if (listingsContainer && siteData.listings) {
     });
 }
 
-// 5. Render the Resources Section
+// 6. Render the Resources Section
 const resourcesContainer = document.getElementById('resources-container');
 if (resourcesContainer && siteData.resources) {
     resourcesContainer.innerHTML = ''; 
 
     siteData.resources.forEach(item => {
         const resCard = document.createElement('div');
-        resCard.className = 'property-card'; // Reusing the same beautiful card style
+        resCard.className = 'property-card';
         
         const imgHTML = item.thumbnail ? `<div class="card-img" style="background-image: url('${item.thumbnail}'); height: 180px;"></div>` : '';
 
@@ -78,7 +107,7 @@ if (resourcesContainer && siteData.resources) {
                 <a href="${item.link}" target="_blank" class="btn-outline" style="display: block; text-align: center;">View Resource</a>
             </div>
         `;
-        // Make resources dark theme to stand out against the dark background section
+        // Make resources dark theme to stand out against the light background section
         resCard.style.background = 'var(--bg-dark)';
         resCard.style.border = '1px solid var(--accent-gold)';
         

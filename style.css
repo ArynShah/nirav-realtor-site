@@ -42,7 +42,7 @@ h1, h2, h3, .logo {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -84,9 +84,26 @@ h1, h2, h3, .logo {
     color: var(--accent-gold);
 }
 
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 101;
+}
+
+.hamburger .bar {
+    width: 28px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 /* Sections & Panels */
 .section {
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
 }
 
 .bg-light-section {
@@ -101,7 +118,7 @@ h1, h2, h3, .logo {
 }
 
 .hero {
-    padding: 6rem 2rem;
+    padding: 4rem 1rem;
     display: flex;
     justify-content: center;
 }
@@ -134,34 +151,43 @@ h1, h2, h3, .logo {
     font-style: italic;
 }
 
-/* Cards (Styled like the photos in the flyer) */
+/* Cards (Carousel) */
 .carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 1rem 2rem 3rem;
+    gap: 1.5rem; /* Slightly tighter gap on mobile */
+    padding: 1rem 1.5rem 3rem; /* Adjust padding to show edge of next card */
     scrollbar-width: none;
 }
 
 .carousel::-webkit-scrollbar { display: none; }
 
 .property-card {
-    min-width: 320px;
+    min-width: 82vw; /* Crucial: Makes it exactly 82% of screen, forcing next card to peek */
     background: var(--bg-light);
     color: var(--text-dark);
     border-radius: 12px;
     overflow: hidden;
     scroll-snap-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Flyer photo aesthetic: thick white border */
     border: 6px solid var(--border-white);
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.property-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+/* Desktop override for cards */
+@media (min-width: 768px) {
+    .property-card {
+        min-width: 320px;
+        width: 320px;
+    }
+    .carousel {
+        justify-content: center;
+    }
+    .property-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
 }
 
 .card-img {
@@ -248,16 +274,39 @@ h1, h2, h3, .logo {
 
 .hero-contact-info a, .hero-contact-info span {
     color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.hero-contact-info a:hover {
+    color: var(--accent-gold);
 }
 
 .hero-contact-info i {
     color: var(--accent-gold);
+    width: 20px;
+}
+
+.hero-socials {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero-socials a {
+    color: var(--accent-gold);
+    transition: color 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: var(--text-light);
 }
 
 /* Grid for Listings Page */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
 }
 
@@ -278,20 +327,58 @@ footer {
     border-top: 1px solid rgba(224, 176, 107, 0.2);
 }
 
-/* Mobile Responsiveness */
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(92, 77, 66, 0.98);
+        width: 250px;
+        height: 100vh;
+        padding-top: 6rem;
+        border-left: 1px solid var(--accent-gold);
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+    }
+    .nav-links.active {
+        right: 0; 
+    }
+    
     .about-panel {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
-    .hero-contact-info p {
-        justify-content: center;
-    }
-    .nav-links {
-        display: none; /* Add back JS toggle logic here if needed */
+    .bio h1 {
+        font-size: 2.5rem;
     }
     .section-title {
         font-size: 2.2rem;
+    }
+    
+    /* Perfect Profile Links Alignment Fix */
+    .hero-contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items inside the block to the left */
+        margin: 0 auto; /* Centers the whole block */
+        width: fit-content; /* Prevents block from taking full width so margin auto works */
+    }
+    .hero-contact-info p {
+        justify-content: flex-start; /* Ensures text stays left-aligned */
+        text-align: left;
+    }
+    .hero-socials {
+        justify-content: center; /* Centers social icons */
+        width: 100%; /* Spans the width of the container to center properly */
+    }
+    
+    .details-panel {
+        padding: 1.5rem;
     }
 }
