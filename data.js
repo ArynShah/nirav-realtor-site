@@ -5,7 +5,7 @@ const siteData = {
         fax: "(416) 747-9777",
         email: "realtorniravshah@yahoo.com",
         officeAddress: "470 Chrysler Dr #20, Brampton, ON L6S 0C1",
-        facebook: "https://facebook.com/yourprofile", 
+        facebook: "https://www.facebook.com/photo/?fbid=10244600227647666&set=a.10231926792419706", 
         instagram: "https://www.instagram.com/realtor.niravshah/",
         portrait: "assets/nirav-portrait.jpeg",
         tagline: "Elevating your real estate experience."
