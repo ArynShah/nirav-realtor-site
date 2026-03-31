@@ -48,7 +48,7 @@ const siteData = {
             type: "Guide",
             description: "Everything you need to know about your first home purchase.",
             link: "assets/guides/buyer-guide.pdf", 
-            thumbnail: "assets/house1/01.jpg" // Added a thumbnail image for the card view
+            thumbnail: "assets/guides/buyer-guide.png" // Added a thumbnail image for the card view
         },
         {
             title: "Market Watch",
@@ -62,7 +62,7 @@ const siteData = {
             type: "Reel",
             description: "A quick look of 201 Emerson Dr, London",
             link: "https://www.instagram.com/p/DRa40c1jE1I/", 
-            thumbnail: "assets/guides/Insta-Reels.jpg" // Added a thumbnail image for the card view
+            thumbnail: "assets/guides/Insta-Reels.png" // Added a thumbnail image for the card view
         }
     ]
 };
