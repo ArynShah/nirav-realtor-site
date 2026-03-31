@@ -29,7 +29,7 @@ const siteData = {
         {
             id: "prop-002",
             address: "947, 10th Street, Mississauga",
-            price: "$2,300",
+            price: "$2,300 /month",
             beds: 2,
             baths: 1,
             sqft: "~700",
