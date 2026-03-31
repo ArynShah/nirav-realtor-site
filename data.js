@@ -13,33 +13,33 @@ const siteData = {
     listings: [
         {
             id: "prop-001",
-            address: "123 Glassy Way, Cambridge",
-            price: "$850,000",
+            address: "201 Emerson Dr, \n London",
+            price: "$598,999",
             beds: 3,
             baths: 2,
-            sqft: 2100,
+            sqft: "~1750",
             highlights: [
                 "Open-concept chef's kitchen",
-                "Spacious backyard for entertaining"
+                "Bangalow on 40x100 lot size"
             ],
             image: "assets/house1/01.jpg",
             description: "A stunning modern home featuring open-concept living, a newly renovated kitchen, and a spacious backyard perfect for entertaining.",
-            gallery: ["assets/house1/01.jpg", "assets/house1/02.jpg", "assets/house1/03.jpg", "assets/house1/04.jpg"] 
+            gallery: ["assets/house1/01.jpg", "assets/house1/02.jpg", "assets/house1/03.jpg", "assets/house1/04.jpg", "assets/house1/05.jpg", "assets/house1/06.jpg", "assets/house1/07.jpg", "assets/house1/08.jpg", "assets/house1/09.jpg", "assets/house1/10.jpg", "assets/house1/11.jpg", "assets/house1/12.jpg", "assets/house1/13.jpg", "assets/house1/14.jpg", "assets/house1/15.jpg", "assets/house1/16.jpg", "assets/house1/17.jpg", "assets/house1/18.jpg", "assets/house1/19.jpg", "assets/house1/20.jpg", "assets/house1/21.jpg", "assets/house1/22.jpg", "assets/house1/23.jpg", "assets/house1/24.jpg", "assets/house1/25.jpg", "assets/house1/26.jpg", "assets/house1/27.jpg", "assets/house1/28.jpg", "assets/house1/29.jpg", "assets/house1/30.jpg", "assets/house1/31.jpg", "assets/house1/32.jpg", "assets/house1/33.jpg", "assets/house1/34.jpg", "assets/house1/35.jpg", "assets/house1/36.jpg", "assets/house1/37.jpg", "assets/house1/38.jpg", "assets/house1/39.jpg", "assets/house1/40.jpg", "assets/house1/41.jpg", "assets/house1/42.jpg", "assets/house1/43.jpg", "assets/house1/44.jpg", "assets/house1/45.jpg", "assets/house1/46.jpg", "assets/house1/47.jpg", "assets/house1/48.jpg", "assets/house1/49.jpg", "assets/house1/50.jpg", "assets/house1/51.jpg", "assets/house1/52.jpg", "assets/house1/53.jpg", "assets/house1/54.jpg", "assets/house1/55.jpg", "assets/house1/56.jpg"] 
         },
         {
             id: "prop-002",
-            address: "123 Frosty Way, Cambridge",
-            price: "$850,000",
-            beds: 3,
-            baths: 2,
-            sqft: 1850,
+            address: "947, 10th Street, Mississauga",
+            price: "$2,300",
+            beds: 2,
+            baths: 1,
+            sqft: "~700",
             highlights: [
-                "Newly finished basement",
+                "Bangalow House",
                 "Quiet, family-friendly neighborhood"
             ],
-            image: "assets/house1.jpg",
+            image: "assets/house2/01.jpeg",
             description: "A stunning modern home featuring open-concept living, a newly renovated kitchen, and a spacious backyard perfect for entertaining.",
-            gallery: ["assets/house1-2.jpg", "assets/house1-3.jpg"]
+            gallery: ["assets/house2/01.jpeg", "assets/house2/02.jpeg", "assets/house2/03.jpeg", "assets/house2/04.jpeg", "assets/house2/05.jpeg", "assets/house2/06.jpeg", "assets/house2/07.jpeg", "assets/house2/08.jpeg"]
         }
     ],
     resources: [
@@ -55,14 +55,14 @@ const siteData = {
             type: "Treb Report",
             description: "February 2026 (Residential, Commercial & Condominium)",
             link: "assets/guides/MarketWatch.pdf", 
-            thumbnail: "assets/house1/02.jpg" // Added a thumbnail image for the card view
+            thumbnail: "assets/guides/MarketWatch.jpg" // Added a thumbnail image for the card view
         },
         {
             title: "Latest Market Trends",
             type: "Reel",
-            description: "A quick look of 201 Emarson Dr London",
+            description: "A quick look of 201 Emerson Dr, London",
             link: "https://www.instagram.com/p/DRa40c1jE1I/", 
-            thumbnail: "assets/house1/02.jpg" // Added a thumbnail image for the card view
+            thumbnail: "assets/guides/Insta-Reels.jpg" // Added a thumbnail image for the card view
         }
     ]
 };
