@@ -51,10 +51,17 @@ const siteData = {
             thumbnail: "assets/house1/01.jpg" // Added a thumbnail image for the card view
         },
         {
+            title: "Market Watch",
+            type: "Treb Report",
+            description: "February 2026 (Residential, Commercial & Condominium)",
+            link: "assets/guides/MarketWatch.pdf", 
+            thumbnail: "assets/house1/02.jpg" // Added a thumbnail image for the card view
+        },
+        {
             title: "Latest Market Trends",
             type: "Reel",
-            description: "A quick look at the Cambridge housing market this month.",
-            link: "https://instagram.com/your-reel-link", 
+            description: "A quick look of 201 Emarson Dr London",
+            link: "https://www.instagram.com/p/DRa40c1jE1I/", 
             thumbnail: "assets/house1/02.jpg" // Added a thumbnail image for the card view
         }
     ]
