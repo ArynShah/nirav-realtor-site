@@ -60,6 +60,11 @@ h1, h2, h3, .logo {
     letter-spacing: 1px;
     font-style: italic;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes the logo left, and links/buttons right */
+    align-items: center; /* This is the magic line that fixes vertical alignment */
+}
 
 .nav-links {
     display: flex;
@@ -165,7 +170,7 @@ h1, h2, h3, .logo {
 
 .property-card {
     min-width: 82vw; /* Crucial: Makes it exactly 82% of screen, forcing next card to peek */
-    background: var(--bg-light);
+    background: #d0c5b7;
     color: var(--text-dark);
     border-radius: 12px;
     overflow: hidden;
@@ -204,6 +209,7 @@ h1, h2, h3, .logo {
     margin: 0 0 0.5rem 0;
     font-size: 1.4rem;
     color: var(--bg-dark);
+    white-space: pre-line;
 }
 
 .price {
@@ -310,6 +316,11 @@ h1, h2, h3, .logo {
     gap: 2.5rem;
 }
 
+.gallery-img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+}
 /* Details Panel */
 .details-panel {
     background: var(--bg-dark);
@@ -378,7 +389,18 @@ footer {
         width: 100%; /* Spans the width of the container to center properly */
     }
     
-    .details-panel {
+.details-panel {
         padding: 1.5rem;
     }
-}
+
+    .details-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;    
+    } /* <--- This closing bracket was missing! */
+
+    .property-card-description {
+        white-space: pre-line;
+    }
+} /* This final bracket closes the @media query */
